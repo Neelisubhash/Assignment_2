@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Task2</title>
+</head>
+<body>
+    <h2>Javascript function that sorts the given string</h2>
+    <p>Enter a string below:</p>
+    <input type="text" id="x">
+    <button onclick="sortString()">Sort</button>
+    <p id="y"></p>
+    <script>
+        function sortString() {
+            const inputElement = document.getElementById("x");
+            const inputString = inputElement.value;
+            const sortedString = inputString.split("").sort().join("");
+            const outputElement = document.getElementById("y");
+            outputElement.textContent = "The sorted string of " + inputString + " is " + sortedString;
+        }
+    </script>
+</body>
+</html>

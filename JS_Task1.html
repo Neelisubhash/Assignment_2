@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Task1</title>
+</head>
+<body>
+    <h2>Javascript function that reverses a number</h2>
+    <p>Enter a number below:</p>
+    <input type="number" id="inputNumber">
+    <button onclick="reverseNumber()">Reverse</button>
+    <p id="output"></p>
+
+    <script>
+        function reverseNumber() {
+            const inputElement = document.getElementById("inputNumber");
+            const inputNumber = inputElement.value;
+            const reversedNumber = parseInt(inputNumber.toString().split("").reverse().join(""));
+            const outputElement = document.getElementById("output");
+            outputElement.textContent = "The reverse of " + inputNumber + " is " + reversedNumber;
+        }
+    </script>
+</body>
+</html>
